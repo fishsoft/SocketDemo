@@ -1,5 +1,8 @@
 package com.morse.socketlibrary.socket;
 
+import android.os.Handler;
+import android.os.Looper;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -39,6 +42,14 @@ public class UDPSocket {
             System.out.println("我是客户端，服务器说：" + reply);
             //4、关闭资源
             socket.close();
+
+            new Handler(Looper.getMainLooper()).post(new Runnable() {
+                @Override
+                public void run() {
+
+                }
+            });
+
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (SocketException e) {

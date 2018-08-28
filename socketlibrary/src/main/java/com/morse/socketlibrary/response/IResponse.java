@@ -5,4 +5,9 @@ package com.morse.socketlibrary.response;
  * Created by admin on 2018/3/20.
  */
 public interface IResponse {
+
+    void onSuccess(String response);
+
+    void onFailure();
+
 }
