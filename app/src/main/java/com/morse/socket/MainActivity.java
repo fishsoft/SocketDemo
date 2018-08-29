@@ -1,7 +1,7 @@
 package com.morse.socket;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getRequest(View view) {
-        // TODO: 2018/3/20 发送get请求 
+        // TODO: 2018/3/20 发送get请求
     }
 
     public void postRequest(View view) {

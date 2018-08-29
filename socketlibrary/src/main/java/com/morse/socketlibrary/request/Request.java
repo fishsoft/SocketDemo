@@ -1,5 +1,6 @@
 package com.morse.socketlibrary.request;
 
+import com.morse.socketlibrary.ThreadPoolManager;
 import com.morse.socketlibrary.response.IResponse;
 import com.morse.socketlibrary.socket.TCPSocket;
 
@@ -30,6 +31,6 @@ public class Request implements IRequest {
 
     @Override
     public void excute() {
-        new TCPSocket(mIp, mPort, mParamter, mResponse);
+        ThreadPoolManager.getInstance().execute(new TCPSocket(mIp, mPort, mParamter, mResponse));
     }
 }
